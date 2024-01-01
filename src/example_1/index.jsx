@@ -7,6 +7,7 @@ let count = 0;
 function TabAndTopic() {
   const tabContent = ['A', 'B', 'C', 'D'];
   const [selectedId, setSelectedId] = useState(0);
+
   count = count + 1;
 
   return (
