@@ -1,7 +1,7 @@
 // import { memo } from 'react';
 let childeCount = 0;
 
-function ChildComponent(props) {
+function Child(props) {
   const { number, sayHello } = props;
   sayHello();
 
@@ -18,9 +18,9 @@ function ChildComponent(props) {
   );
 }
 
-export default ChildComponent;
-// export default memo(ChildComponent);
+export default Child;
+// export default memo(Child);
 
 // 如何減少 re-render?
-// 1. 用 memo 包住 ChildComponent
+// 1. 用 memo 包住 Child
 // 2. sayHello 這個 function 用 useCallback 包住

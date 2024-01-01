@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import { useCallback } from 'react';
 // import { useMemo } from 'react';
-import ChildComponent from './ChildComponent';
+import Child from './Child';
 
 let parentCount = 0;
 
@@ -28,10 +28,10 @@ function Greeting() {
   //   console.log(`Hello! My number is ${number}`);
   // }, [number]);
 
-  // // 3. 使用 useMemo 前
+  // 3. 使用 useMemo 前
   // const expensiveValue = expensiveFunction(number);
 
-  // // 3. 使用 useMemo 後
+  // // // 3. 使用 useMemo 後
   // const expensiveValue = useMemo(() => expensiveFunction(number), [number]);
 
   return (
@@ -56,10 +56,10 @@ function Greeting() {
           Add 1
         </button>
 
-        {/* 3. 使用 useMemo
-        <div>Expensive Vale: {expensiveValue}</div> */}
+        {/* 3. 使用 useMemo */}
+        {/* <div>Expensive Vale: {expensiveValue}</div> */}
 
-        <ChildComponent number={number} sayHello={sayHello} />
+        <Child number={number} sayHello={sayHello} />
       </header>
     </div>
   );
