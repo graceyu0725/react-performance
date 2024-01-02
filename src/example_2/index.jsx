@@ -6,9 +6,9 @@ import Child from './Child';
 let parentCount = 0;
 
 // // 3. 使用 useMemo
-// const expensiveFunction = (number) => {
+// const expensiveFunction = (num) => {
 //   for (let i = 0; i < 1000000000; i++) {}
-//   return number * 10;
+//   return num * 10;
 // };
 
 function Greeting() {
@@ -22,16 +22,16 @@ function Greeting() {
     console.log(`Hello! My number is ${number}`);
   };
 
-  // // 2. 使用 useCallback 後
-  // // 當 number 值有改變時，才重新產生這個 function
+  // // // 2. 使用 useCallback 後
+  // // // 當 number 值有改變時，才重新產生這個 function
   // const sayHello = useCallback(() => {
   //   console.log(`Hello! My number is ${number}`);
   // }, [number]);
 
-  // 3. 使用 useMemo 前
+  // // 3. 使用 useMemo 前
   // const expensiveValue = expensiveFunction(number);
 
-  // // // 3. 使用 useMemo 後
+  // // 3. 使用 useMemo 後
   // const expensiveValue = useMemo(() => expensiveFunction(number), [number]);
 
   return (
@@ -57,7 +57,7 @@ function Greeting() {
         </button>
 
         {/* 3. 使用 useMemo */}
-        {/* <div>Expensive Vale: {expensiveValue}</div> */}
+        {/* <div>Expensive Value: {expensiveValue}</div> */}
 
         <Child number={number} sayHello={sayHello} />
       </header>
